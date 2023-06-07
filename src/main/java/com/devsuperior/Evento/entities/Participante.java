@@ -1,12 +1,23 @@
 package com.devsuperior.Evento.entities;
 
-import java.util.Objects;
+import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+@Entity
+@Table(name = "tb_participante")
 public class Participante {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nome;
+    @Column(unique = true)
     private String email;
+
+    @ManyToMany(mappedBy = "participantes")
+    private List<Atividade> atividades = new ArrayList<>();
 
     public Participante() {
     }
