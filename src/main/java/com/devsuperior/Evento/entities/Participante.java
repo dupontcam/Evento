@@ -52,6 +52,10 @@ public class Participante {
         this.email = email;
     }
 
+    public List<Atividade> getAtividades() {
+        return atividades;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

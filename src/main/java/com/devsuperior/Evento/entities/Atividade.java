@@ -34,11 +34,12 @@ public class Atividade {
     public Atividade() {
     }
 
-    public Atividade(Long id, String nome, String descricao, Double preco) {
+    public Atividade(Long id, String nome, String descricao, Double preco, Categoria categoria) {
         this.id = id;
         this.nome = nome;
         this.descricao = descricao;
         this.preco = preco;
+        this.categoria = categoria;
     }
 
     public Long getId() {
@@ -71,6 +72,18 @@ public class Atividade {
 
     public void setPreco(Double preco) {
         this.preco = preco;
+    }
+
+    public Categoria getCategoria() {
+        return categoria;
+    }
+
+    public List<Bloco> getBlocos() {
+        return blocos;
+    }
+
+    public List<Participante> getParticipantes() {
+        return participantes;
     }
 
     @Override

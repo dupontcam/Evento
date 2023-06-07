@@ -54,6 +54,10 @@ public class Bloco {
         this.fim = fim;
     }
 
+    public Atividade getAtividade() {
+        return atividade;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -68,4 +72,5 @@ public class Bloco {
     public int hashCode() {
         return id != null ? id.hashCode() : 0;
     }
+
 }
